@@ -1,0 +1,46 @@
+---
+title: "week_2_rmd_1_2"
+author: "Andy Domenico"
+date: "`r Sys.Date()`"
+output: ioslides_presentation
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+##Slide 1
+Some content
+
+##Title
+
+###A top level subheading
+
+####A second level subheading
+
+- bullet 1
+- bullet 2
+
+1. Item a
+2. Item b
+
+Plain text
+*italicized text*
+**Bold text**
+`for (i %in% 1:10)` 
+
+```{r, comment = "", echo=TRUE}
+head(mtcars)
+```
+
+##Graphing Slide
+```{r, echo=FALSE, fig.align='center', fig.cap='mtcars'}
+plot(mtcars$wt, mtcars$mpg, xlab="Weight", ylab="MPG")
+```
+
+
+
+
+
+
+
