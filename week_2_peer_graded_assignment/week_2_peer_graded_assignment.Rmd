@@ -1,8 +1,10 @@
 ---
 title: "Week 2 Peer Graded Assignment"
-output: html_notebook
-author: Andy Domenico
-date: 08/27/2022
+author: "Andy Domenico"
+date: "08/27/2022"
+output:
+  html_document:
+    df_print: paged
 ---
 
 Create a web page using R Markdown that features a map created with Leaflet. 
@@ -14,21 +16,22 @@ Your webpage must contain the date that you created the document, and it must co
 This project will show a map of US Veterans Affairs locations.  Markers will contain metadata about each facility.  
 
 
-```{r, echo=FALSE}
+```{r}
 library(dplyr)
 library(leaflet)
 library(jsonlite)
+library(readr)
 ```
 
 
 Read the data from the json file into a data.frame
-```{r, echo=TRUE}
-va_data <- read_csv("~/data/vafacilitylocation.csv")
+```{r}
+va_data <- read_csv("data/vafacilitylocation.csv")
 head(va_data)
 ```
 
 rename 'longitude' to 'lng' and 'latitide' to'lat' for easier processing
-```{r, echo=FALSE}
+```{r}
 rename(va_data, lng = longitude)
 rename(va_data, lat = latitude)
 ```
@@ -39,7 +42,7 @@ Create a leaflet map of the data, with markers for each location and a popup tel
 va_data %>%
   leaflet() %>%
   addTiles() %>%
-  addMarkers(popup = va_data$name)
+  addMarkers(popup = va_data$name, clusterOptions=markerClusterOptions())
 ```
 
 

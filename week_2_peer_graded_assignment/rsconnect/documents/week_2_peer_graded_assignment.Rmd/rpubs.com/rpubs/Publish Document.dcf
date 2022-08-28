@@ -1,0 +1,11 @@
+name: Publish Document
+title:
+username:
+account: rpubs
+server: rpubs.com
+hostUrl: rpubs.com
+appId: https://api.rpubs.com/api/v1/document/935572/30364791ce69402087f149b82fce1159
+bundleId: https://api.rpubs.com/api/v1/document/935572/30364791ce69402087f149b82fce1159
+url: http://rpubs.com/andydomenico/935572
+when: 1661654169.25866
+lastSyncTime: 1661654169.25867
